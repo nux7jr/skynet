@@ -1,0 +1,1 @@
+minify blackPearl.js --out-file input.min.js --mangle.keepClassName

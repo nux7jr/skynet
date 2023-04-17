@@ -1,0 +1,444 @@
+.skynet-tiksan-skynet {
+  display: block;
+}
+/* basic */
+/* WebKit and Chromiums */
+.skynet-chat::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 8px;
+}
+.skynet-chat::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+.tiksan-skynet {
+  position: relative;
+  text-align: left;
+  font-family: Helvetica, Arial !important;
+}
+.tiksan-skynet__wrapper {
+  position: fixed;
+  z-index: 998;
+  display: block !important;
+  bottom: 10px;
+  background: var(--main-color);
+  width: 366px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 12px 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.skynet-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  min-height: 40px;
+}
+.skynet-item__wrapper {
+  margin: 0 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.skynet-item:first-child {
+  display: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  position: relative;
+}
+.skynet-img {
+  max-width: 100px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.skynet-consult__img {
+  max-width: 40px;
+  max-height: 40px;
+}
+.skynet-text__heading {
+  margin: 1px 0 1px 0;
+}
+.skynet-text__small,
+.skynet-call__small {
+  font-size: small;
+}
+.skynet-chat__await {
+  margin: 20px;
+  margin-bottom: 5px;
+}
+.skynet-chat {
+  cursor: auto;
+}
+.skynet-just_chat {
+  position: relative;
+}
+
+/* hovers */
+.tiksan-skynet:hover .skynet-item:first-child {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  width: 366px;
+  transform: translateY(-100%);
+  animation: inter 1s forwards;
+  background: var(--main-color);
+}
+.tiksan-skynet:hover:nth-child(1) {
+  background: var(--main-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tiksan-skynet:hover:nth-child(2) .skynet-item__wrapper:hover {
+  background: rgba(255, 119, 119, 0.139);
+  border-radius: 0px;
+}
+.skynet-item__wrapper:hover > .skynet-consult__img {
+  transform: scale(1.2);
+}
+.skynet-item__wrapper:hover > .skynet-call__img {
+  transform: scale(1.2);
+}
+.skynet-chats__person {
+  padding: 20px 10px 10px 0px;
+}
+.skynet-chats__form {
+  display: none;
+  height: 500px;
+  width: 366px;
+  border-radius: 10px;
+}
+.skynet-item__logo {
+  display: flex;
+}
+.skynet-form-close__img {
+  width: 30px;
+  height: 30px;
+}
+.skynet-activeForm {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  bottom: 10px;
+
+  width: 366px;
+  transform: translateY(90%);
+  animation: inter 0.3s forwards;
+  background: var(--main-color);
+}
+.skynet-chat {
+  background-color: white;
+  overflow-y: scroll;
+  scrollbar-color: rgb(59, 59, 59) white;
+  scrollbar-width: thin;
+  margin: 5px;
+  padding-left: 15px;
+  height: 418px;
+}
+.skynet-chat-option {
+  position: relative;
+}
+.skynet-icon-close {
+  fill: var(--main-reverse);
+  stroke: var(--main-reverse);
+}
+.skynet-chats__form-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 22px;
+}
+.skynet-call-form {
+  display: none;
+  height: 500px;
+  width: 336px;
+  border-radius: 10px;
+}
+.skynet-activeCallForm {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  bottom: 1vw;
+  width: 366px;
+  transform: translateY(90%);
+  animation: inter 0.3s forwards;
+  background: var(--main-color);
+}
+.skynet-call-mobile-modal__form__text {
+  margin: 10px 0;
+  text-align: center;
+}
+.skynet-user-mess {
+  display: block;
+  width: 289px;
+  padding: 10px 15px;
+  border: 1px solid #dddcd7;
+  border-radius: 10px;
+  outline: none;
+}
+.skynet-user-mess__wrapper {
+  animation: fadeIn 0.3s forwards;
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  width: 287px;
+}
+.skynet-user-mess__button {
+  border: none;
+  position: absolute;
+  background: transparent;
+  top: 10px;
+  right: -30px;
+  cursor: pointer;
+}
+#skynet-loading {
+  color: black;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  animation: rotation 1s linear infinite;
+}
+#skynet-special-loading {
+  color: black;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  animation: rotation 1s linear infinite;
+}
+.skynet-user__mess {
+  color: black;
+  border: 1px solid #dddcd7;
+  border-radius: 10px;
+  background-color: #fafafa;
+  padding: 10px;
+  margin: 7px;
+  position: relative;
+  font-size: 13px;
+  z-index: 0;
+}
+.skynet-user__mess-failed {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.skynet-call-form__heading {
+  padding: 15px 5px;
+}
+.skynet-dataTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+.skynet-call__form-close {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+.skynet-dataTime {
+  margin: 0 auto;
+  max-width: 243px;
+}
+
+.skynet-selectCall {
+  display: flex;
+  justify-content: space-between;
+}
+.skynet-input__call {
+  border: 1px solid #bcc3c9;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 10px 4px;
+  color: gray;
+
+  outline: none;
+  transition: 0.4s;
+}
+.skynet-input__call:focus {
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.skynet-call__wrapper {
+  background-color: white;
+  margin: 0 5px 5px 5px;
+  height: 425px;
+
+  cursor: auto;
+}
+.skynet-call__submit {
+  line-height: 41px;
+  margin-bottom: 15px;
+  border: 1px solid #b1ae91;
+  margin-left: 5px;
+  background: #fdcf31;
+  cursor: pointer;
+}
+.skynet-call__small {
+  color: black;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+.skynet-call__small:hover {
+  color: gray;
+}
+.skynet-bubble,
+.skynet-form-bubble,
+.skynet-second-bubble,
+.skynet-success-bubble {
+  font-size: 14px;
+  width: calc(100% - 15px);
+  border-radius: 15px;
+  border: 2px solid #dddcd7;
+  display: none;
+  position: relative;
+  color: black;
+  margin: 15px 0 10px 0;
+  background-color: #fafafa;
+
+  animation: fadeIn 0.3s forwards;
+}
+.skynet-bubble-active,
+.skynet-second-bubble--active,
+.skynet-form-bubble--active,
+.skynet-success-bubble--active {
+  display: inline-block;
+}
+.skynet-bubble::after,
+.skynet-form-bubble::after,
+.skynet-second-bubble::after,
+.skynet-success-bubble::after {
+  content: "";
+  width: 18px;
+  height: 35px;
+  border-left: 3px solid #dddcd7;
+  border-bottom: 4px solid #dddcd7;
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  background: white;
+  transform: skewX(-30deg) skewY(-48deg);
+  background-color: #fafafa;
+}
+.skynet-bubble-in {
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+  position: relative;
+  z-index: 2;
+  background-color: #fafafa;
+}
+/* user bubble */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.skynet-bubble-user {
+  display: none;
+  animation: fadeIn 0.5s all;
+  font-size: 14px;
+  width: 318px;
+  border-radius: 15px;
+  border: 2px solid #dddcd7;
+  animation: fadeIn 0.3s forwards;
+  position: relative;
+  color: black;
+  margin: 16px 0 8px 0px;
+  background-color: #fafafa;
+}
+.skynet-bubble-user::after {
+  content: "";
+  width: 21px;
+  height: 16px;
+  border-left: 3px solid #dddcd7;
+  border-bottom: 2px solid #dddcd7;
+  position: absolute;
+  bottom: -5px;
+  right: 8px;
+  background: white;
+  transform: skewX(48deg) skewY(-48deg);
+  background-color: #fafafa;
+}
+.skynet-bubble-in-user {
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+  position: relative;
+  z-index: 2;
+  background-color: #fafafa;
+}
+.skynet-success-bubble {
+  margin-bottom: 40px;
+}
+.skynet-form-bubble__wrapper {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.skynet-form-bubble__input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.skynet-form-bubble__button {
+  display: block;
+  max-width: fit-content;
+  border: 1px solid #dedcd6;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.skynet-form-bubble__button:hover {
+  background-color: #dedcd6;
+}
+.skynet-from-bubble__load,
+.skynet-input__call__load {
+  display: none;
+  margin: 5px auto;
+}
+.skynet-form-bubble__input--failed {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.skynet-call__succsses {
+  background-color: white;
+  margin: 0 5px 5px 5px;
+  height: 425px;
+  display: none;
+
+  color: black;
+}
+.skynet-call__succsses__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  height: 425px;
+}
+.skynet-call__go-back {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}

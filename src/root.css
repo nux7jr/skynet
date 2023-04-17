@@ -1,0 +1,85 @@
+:root {
+  --main-color: #a79c9c;
+  --main-color-hover: #bc1c1c;
+  --main-color-hover-second: #b7abab;
+  --main-color-hover-third: #a79c9c;
+  --main-color-hover-forth: #f2f2f2;
+  --main-reverse: white;
+}
+.tiksan-plugin {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+}
+.skynet-tiksan-plugin {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+}
+.skynet-plugin-mobile {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+}
+.skynet-question-mobile-modal,
+.skynet-call-mobile-modal {
+  display: none;
+}
+.skynet-hidden {
+  display: none;
+}
+@keyframes inter {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  0% {
+    border-color: red;
+  }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+  100% {
+    border-color: #dddcd7;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
